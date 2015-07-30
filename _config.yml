@@ -3,6 +3,7 @@ relative_permalinks: false
 author_name: Sandra Lindberg
 author_email: sandra.k.lindberg@gmail.com
 blog_name: Sandra Lindberg
+excerpt_separator: <!--more—>
 
 # BUILD SETTINGS
 markdown: kramdown
