@@ -3,11 +3,10 @@ layout: post
 title: Hello World
 permalink: /hello-world.html
 category: test
-excerpt_separator: <!--more-->
 ---
 
 This is an excerpt
 
 <!--more-->
-
-Test
+ 
+Lorem ipsum dolor sit amet 
