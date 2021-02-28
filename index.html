@@ -1,16 +1,167 @@
----
-layout: default
-title: Sandra Lindberg
-frontpage: true
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sandra Lindberg</title>
+    <meta name="description" content="Front-end developer">
+    <meta property="og:title" content="Sandra Lindberg">
+    <meta property="og:description" content="Front-end developer">
+    <meta property="og:image" content="http://sandralindberg.github.io/me.jpg">
+    <meta name="twitter:title" content="Sandra Lindberg">
+    <meta name="twitter:description" content="Front-end developer">
+    <meta name="twitter:image" content="http://sandralindberg.github.io/me.jpg">
+    <meta name="twitter:card" content="summary">
+    <style>
+      html {font-size: 100%;}
+      body {
+        color: #2e2e2e;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 62.5%;
+        margin: 2rem;
+      }
+      h1 {
+        font-size: calc(3rem + 2vh);
+      }
+      p {
+        font-size: calc(1rem + 1vh);
+        max-width: 45ch;
+      }
+      ul {
+        font-size: calc(1rem + 1vh);
+      }
+      li {
+        margin-bottom: .8rem;
+      }
 
 
-<h1>GitHub Pages <3 Jekyll</h1>
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
+      /*
+        Code copied from https://codepen.io/rrenula/pen/LzLXYJ and modified
+      */
+
+      @media(min-width: 750px) {
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          margin-top: -.5em;
+        }
+
+        .grid {
+          display: grid;
+          grid-gap: 0;
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: minmax(2vh, auto);
+          margin: 0 auto;
+        }
+
+        .grid-item {
+          display: inline-block;
+          min-height: 400px;
+          width: 50%;
+        }
+
+        .grid-item--full-width {
+          width: 100%;
+        }
+
+        .content {
+          display: flex;
+          flex-flow: column nowrap;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+        }
+
+        @supports (display: grid) {
+          .grid-item {
+            width: auto;
+            min-height: 0;
+          }
+          
+          .grid-item:nth-child(1) {
+            grid-column: 1 / span 2;
+            grid-row: 1 / 16;
+            background: #fd868c;
+            background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4rem), 0 100%);
+            padding-bottom: 2rem;
+            padding: 2rem 2rem 4rem 2rem;
+          }
+
+          .grid-item:nth-child(2) {
+            background: #c471f5;
+            background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+            grid-column: 1 / span 1;
+            grid-row: 16 / 36;
+            -webkit-clip-path: polygon(0 4rem, 0 100%, calc(100% - 2rem) calc(100% - 2rem), 100% 2rem);
+            clip-path: polygon(0 4rem, 0 100%, calc(100% - 2rem) calc(100% - 2rem), 100% 2rem);
+            margin-top: -2rem;
+            padding: 3rem 6rem 4rem 4rem;
+          }
+
+          .grid-item:nth-child(3) {
+            background: #6f86d6;
+            background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+            grid-column: 2 / span 1;
+            grid-row: 16 / 36;
+            -webkit-clip-path: polygon(1.9rem 1.9rem, 0% calc(100% - 2rem), 100% 100%, 100% 0%);
+            clip-path: polygon(1.9rem 1.9rem, 0% calc(100% - 2rem), 100% 100%, 100% 0%);
+            margin-top: -2rem;
+            padding: 3rem 4rem 4rem 6rem;
+          }
+
+          .grid-item:nth-child(4) {
+            background: #00cdac;
+            background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+            grid-column: 1 / span 2;
+            grid-row: 36 / 47;
+            -webkit-clip-path: polygon(48% 0, 100% 2rem, 100% 100%, 0 100%, 0 2rem);
+            clip-path: polygon(48% 0, 100% 2rem, 100% 100%, 0 100%, 0 2rem);
+            padding: 2rem 2rem 2rem 2rem;
+          }
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+      <main class="grid">
+        <div class="grid-item grid-item--full-width">
+          <div class="content">
+            <h1>Hello!</h1>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="content">
+            <p>
+              I'm Sandra, a web front-end developer from Stockholm, Sweden. 
+            </p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="content">
+            <p><strong>I like</strong></p>
+            <ul>
+              <li>design systems</li>
+              <li>UI code/design</li>
+              <li>accessibility</li>
+            </ul>
+            
+          </div>
+        </div>
+        <div class="grid-item grid-item--full-width">
+          <div class="content">
+            <p>
+              You can find me on <a href="https://github.com/sandralindberg">GitHub</a>, <a href="https://clubber.one/@sandralindberg">Clubhouse</a> or <a href="http://linkedin.com/in/sandraklindberg">LinkedIn</a>. 
+            </p>
+          </div>
+        </div>
+      </main>      
+  </body>
+</html>
